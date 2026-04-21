@@ -26,7 +26,7 @@ NOTE: If you are having issues with permissions. And you get error:
 -- NOTE: This has been updated from the video to fix issues with encoding
 
 COPY company_dim
-FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\company_dim.csv'
+FROM 'C:\Users\dudyala vipul\Downloads\all_folders\csv_files\company_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY skills_dim
@@ -40,3 +40,8 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 COPY skills_job_dim
 FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+
+
+SELECT *
+FROM job_postings_fact
+LIMIT 100;
